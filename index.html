@@ -191,6 +191,10 @@ textarea.inp{resize:vertical;min-height:80px}
 .rec-title{font-size:13px;font-weight:600;color:var(--text);margin-bottom:2px}
 .rec-sub{font-size:12px;color:var(--text3)}
 </style>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#7c6df9">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
 </head>
 <body>
 
@@ -1141,6 +1145,11 @@ function deleteTimeblock(id) { state.timeblocks=state.timeblocks.filter(t=>t.id!
 // ============================================================
 chartsRendered = false;
 renderPage();
+</script>
+<script>
+if ('serviceWorker' in navigator) {
+  navigator.serviceWorker.register('/sw.js')
+}
 </script>
 </body>
 </html>

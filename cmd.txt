@@ -1,0 +1,11 @@
+# Test as desktop app
+npm start
+# A native window opens with your app
+
+# Build Windows installer (run this on Windows)
+npm run build-win
+# Output: dist/ML Tracker Setup 1.0.0.exe
+
+# Build Mac installer (run this on Mac)
+npm run build-mac
+# Output: dist/ML Tracker-1.0.0.dmg
